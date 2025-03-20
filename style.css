@@ -9,7 +9,7 @@
 body{
     width: 100%;
     height: auto;
-    overflow: auto;
+    overflow-x: hidden;
     background-color: black;
 }
 nav{
@@ -99,6 +99,7 @@ nav{
 section{
     width: 100%;
     height: auto;
+    
 }
 .main-container{
     width: 100%;
@@ -893,11 +894,11 @@ input:focus, textarea:focus {
 @media (max-width: 768px) {
     .contact-content {
         grid-template-columns: 1fr;
+        margin-right: 20px;
     }
     
-    .contact-form, .contact-info {
-        margin: 0 10px;
-    }
+    
+    
 }
 
 
