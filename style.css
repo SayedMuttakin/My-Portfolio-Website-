@@ -899,21 +899,41 @@ input:focus, textarea:focus {
 
 
 /* Responsive Design */
-/* Center Contact Form in Mobile View */
 @media (max-width: 768px) {
+    .contact-form {
+        margin: 0 auto; /* পুরোপুরি মাঝখানে আনার জন্য */
+        max-width: 90%; /* মোবাইলে সুন্দর দেখানোর জন্য */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .contact-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .subscribe-form input {
+        width: 100%;
         text-align: center;
     }
 
-    .contact-form {
-        width: 90%; /* মোবাইলে সুন্দরভাবে ফিট করানোর জন্য */
-        max-width: 400px; /* ফর্ম বড় হয়ে গেলে লিমিট রাখার জন্য */
+    .subscribe-btn {
+        width: 100%;
     }
 }
+
 
 
 
