@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>More Projects - Muttakin Sayed</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Muttakin <span>Sayed</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="index.html#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="index.html#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="index.html#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="index.html#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="index.html#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Additional Projects Section -->
+    <section id="more-projects">
+        <div class="projects" data-aos="fade-up" data-aos-duration="1500">
+            <div class="projects-container">
+                <h2>More <span>Projects</span></h2>
+                
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="images/ecommerce-admin.jpg" alt="E-Commerce Admin Dashboard">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-Commerce Admin Dashboard</h3>
+                            <p>Full-featured admin dashboard with product management, order tracking, and sales analytics.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/nodejs-logo.png" alt="Node.js" class="tech-logo">
+                                <img src="images/tech-logos/mongodb-logo.png" alt="MongoDB" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="250">
+                        <div class="project-image">
+                            <img src="images/social-media.jpg" alt="Social Media Platform">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Social Media Platform</h3>
+                            <p>Social network with real-time chat, post sharing, and user authentication system.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/firebase-logo.png" alt="Firebase" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="images/chat-app.jpg" alt="Real-time Chat App">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Real-time Chat Application</h3>
+                            <p>Instant messaging app with group chat functionality and message history.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/socketio-logo.png" alt="Socket.io" class="tech-logo">
+                                <img src="images/tech-logos/nodejs-logo.png" alt="Node.js" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="350">
+                        <div class="project-image">
+                            <img src="images/blog-platform.jpg" alt="Blog Platform">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Modern Blog Platform</h3>
+                            <p>CMS-style blog with rich text editor, categories, and comment system.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/nextjs-logo.png" alt="Next.js" class="tech-logo">
+                                <img src="images/tech-logos/sanity-logo.png" alt="Sanity" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="project-image">
+                            <img src="images/task-manager.jpg" alt="Task Manager">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Advanced Task Manager</h3>
+                            <p>Kanban-style task management system with drag & drop functionality.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/redux-logo.png" alt="Redux" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="450">
+                        <div class="project-image">
+                            <img src="images/fitness-app.jpg" alt="Fitness Tracker">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Fitness Tracker App</h3>
+                            <p>Workout tracking application with exercise database and progress charts.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/firebase-logo.png" alt="Firebase" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="project-image">
+                            <img src="images/recipe-app.jpg" alt="Recipe Finder">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Recipe Finder App</h3>
+                            <p>Search thousands of recipes with filtering by ingredients and dietary needs.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/edamam-logo.png" alt="Edamam API" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="550">
+                        <div class="project-image">
+                            <img src="images/portfolio-template.jpg" alt="Portfolio Template">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Portfolio Template</h3>
+                            <p>Modern responsive portfolio template with dark/light mode toggle.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/html-logo.png" alt="HTML5" class="tech-logo">
+                                <img src="images/tech-logos/css-logo.png" alt="CSS3" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="project-image">
+                            <img src="images/weather-app.jpg" alt="Weather App">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Live Weather App</h3>
+                            <p>Real-time weather forecasting application with geolocation support.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/openweather-logo.png" alt="OpenWeather API" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="project-card" data-aos="zoom-in" data-aos-delay="650">
+                        <div class="project-image">
+                            <img src="images/event-booking.jpg" alt="Event Booking">
+                            <div class="project-links">
+                                <a href="#" class="demo-btn">Live Demo</a>
+                                <a href="#" class="code-btn">View Code</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Event Booking System</h3>
+                            <p>Ticket booking platform with seat selection and payment integration.</p>
+                            <div class="tech-stack">
+                                <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                                <img src="images/tech-logos/stripe-logo.png" alt="Stripe" class="tech-logo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container" data-aos="fade-up" data-aos-duration="1500">
+            <div class="footer-grid">
+                <!-- About Column -->
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Muttakin Sayed</h3>
+                    <p class="footer-description">A passionate frontend developer specializing in creating modern, responsive and user-friendly web experiences.</p>
+                    <div class="social-links">
+                        <a href="https://github.com/SayedMuttakin" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           data-aos="fade-up" 
+                           data-aos-duration="1500" 
+                           data-aos-delay="1300">
+                           <i class="fa-brands fa-github"></i>
+                        </a>
+                        
+                        <a href="https://web.facebook.com/muttakin.rahman.sayed/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           data-aos="fade-up" 
+                           data-aos-duration="1500" 
+                           data-aos-delay="1400">
+                           <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/muttakin-rahman-sayed-891ab0330/" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           data-aos="fade-up" 
+                           data-aos-duration="1500" 
+                           data-aos-delay="1500">
+                           <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        
+                        <a href="https://x.com/SayedMuttakin" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           data-aos="fade-up" 
+                           data-aos-duration="1500" 
+                           data-aos-delay="1600">
+                           <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Quick Links -->
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Info -->
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
+                        <li><i class="fas fa-envelope"></i> muttakinrhaman626@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +880 1883 229295</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Copyright -->
+            <div class="copyright" data-aos="fade-up" data-aos-delay="500">
+                <p>© 2024 Muttakin Sayed. All rights reserved</p>
+                <p>Made with <i class="fas fa-heart"></i> in Bangladesh</p>
+            </div>
+        </div>
+    </footer>
+    
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({ offset: 0 });
+        </script>
+        <script src="script.js"></script>
+    </body>
+    </html>

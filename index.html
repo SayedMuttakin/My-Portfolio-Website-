@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Muttakin's Portfolio</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Muttakin <span>Sayed</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#home">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Projects</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="home">
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="main.png" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Muttakin</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">"I am a passionate Frontend Developer who loves building user-friendly and responsive websites using React, Redux, and Tailwind CSS. I am always eager to learn new technologies and work on improving UI/UX design." 😊</p>
+                <div class="social-links">
+                    <a href="https://github.com/SayedMuttakin" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1300">
+                       <i class="fa-brands fa-github"></i>
+                    </a>
+                    
+                    <a href="https://web.facebook.com/muttakin.rahman.sayed/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1400">
+                       <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/muttakin-rahman-sayed-891ab0330/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1500">
+                       <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="https://x.com/SayedMuttakin" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1600">
+                       <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                    <a href="https://www.fiverr.com/sayed9461/buying?source=avatar_menu_profile" target="_blank">
+                        <button>Hire Me</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="skills" data-aos="fade-up" data-aos-duration="1500">
+    <div class="skills-container">
+        <h2>My <span> Skills</span></h2>
+        
+        <div class="skills-columns">
+            <!-- Technical Skills Column -->
+            <div class="skills-column" data-aos="fade-right" data-aos-delay="200">
+                <h3>Technical Skills</h3>
+                
+                <!-- HTML -->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-html5 html-icon"></i> HTML</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress html"></div>
+                    </div>
+                </div>
+                
+                <!-- CSS -->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-css3-alt css-icon"></i> CSS</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress css"></div>
+                    </div>
+                </div>
+            
+                <!-- JavaScript -->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-js-square js-icon"></i> JavaScript</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress js"></div>
+                    </div>
+                </div>
+            
+                <!-- React -->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span><i class="fab fa-react react-icon"></i> React</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress react"></div>
+                    </div>
+                </div>
+            
+                <!-- Tailwind -->
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>
+                            <svg class="siTailwindcss" width="20" height="20" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6.036c-2.667 0-4.333 1.325-5 3.976 1-1.325 2.167-1.822 3.5-1.491.761.189 1.305.738 1.906 1.345C13.387 10.855 14.522 12 17 12c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345C15.613 7.145 14.478 6 12 6zm-5 6c-2.667 0-4.333 1.325-5 3.976 1-1.326 2.167-1.822 3.5-1.491.761.189 1.305.738 1.907 1.345C8.387 16.855 9.522 18 12 18c2.667 0 4.333-1.325 5-3.976-1 1.325-2.166 1.822-3.5 1.491-.761-.189-1.305-.738-1.907-1.345C10.613 13.145 9.478 12 7 12z"/>
+                            </svg>
+                            Tailwind
+                        </span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress react" data-percent="90%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Skills Column -->
+             
+<div class="skills-column" data-aos="fade-left" data-aos-delay="200">
+    <h3>Professional Skills</h3>
+    <div class="skill-item">
+        <div class="skill-info">
+            <span>Creativity</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress creativity" data-percent="90%"></div>
+        </div>
+    </div>
+
+    <div class="skill-item">
+        <div class="skill-info">
+            <span>Communication</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress communication" data-percent="85%"></div>
+        </div>
+    </div>
+
+    <div class="skill-item">
+        <div class="skill-info">
+            <span>Problem Solving</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress problem-solving" data-percent="95%"></div>
+        </div>
+    </div>
+
+    <div class="skill-item">
+        <div class="skill-info">
+            <span>Teamwork</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress teamwork" data-percent="88%"></div>
+        </div>
+    </div>
+    <div class="skill-item">
+        <div class="skill-info">
+            <span>Time Management</span>
+        </div>
+        <div class="skill-bar">
+            <div class="skill-progress teamwork" data-percent="95%"></div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="about-me" data-aos="fade-up" data-aos-duration="1500">
+    <div class="about-container">
+        <h2 class="sayed"> About <span>Me</span> </h2>
+        <div class="about-content">
+            <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                <h3>I'm a Passionate <span>Frontend Developer</span></h3>
+                <p>
+                    I specialize in creating visually appealing and highly responsive websites using Html , Css , JavaScript , React Js , Next Js ,  Redux, and Tailwind CSS.
+                    My goal is to develop seamless user experiences while keeping up with the latest web technologies and design trends.
+                    I enjoy solving problems and working on innovative projects that enhance the digital experience.
+                </p>
+                <p>
+                    With a keen eye for design and functionality, I ensure that each website I build is user-friendly, fast, and optimized.
+                    I love learning new technologies and continuously improving my skills to stay ahead in the ever-evolving web development landscape.
+                </p>
+                <a href="cv.pdf" class="download-btn" download>Download CV</a>
+            </div>
+            <!-- ইমেজ -->
+            <div class="about-image" data-aos="fade-left" data-aos-delay="400">
+                <img src="main.png" alt="Muttakin Sayed">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="projects" data-aos="fade-up" data-aos-duration="1500">
+    <div class="projects-container">
+        <h2>My <span>Projects</span></h2>
+        
+        <div class="project-grid">
+         <!-- Project 1 -->
+<div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+    <div class="project-image">
+        <img src="images/project1.jpg" alt="E-Commerce Project">
+        <div class="project-links">
+            <a 
+                href="https://ecommerce-frontend-sayedmuttakins-projects.vercel.app" 
+                class="demo-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Live Demo
+            </a>
+            <a href="#" class="code-btn">View Code</a>
+        </div>
+    </div>
+                <div class="project-info">
+                    <h3>Modern E-Commerce Store</h3>
+                    <p>Built with React, Redux, Node.js and Tailwind CSS. Features product filtering, cart system and payment integration.</p>
+                    <div class="tech-stack">
+                        <!-- React -->
+                        <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                        
+                        <!-- Vite -->
+                        <img src="images/tech-logos/vite-logo.png" alt="Vite" class="tech-logo">
+                        
+                        <!-- Redux -->
+                        <img src="images/tech-logos/redux-logo.png" alt="Redux" class="tech-logo">
+                        
+                        <!-- Tailwind CSS -->
+                        <img src="images/tech-logos/tailwind-logo.png" alt="Tailwind" class="tech-logo">
+                        
+                        <!-- Node.js -->
+                        <img src="images/tech-logos/nodejs-logo.png" alt="Node.js" class="tech-logo">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Project 2 -->
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="project-image">
+                    <img src="/images/project2.jpg" alt="Restaurant Website">
+                    <div class="project-links">
+                        <a href="https://food-del-app-ten-sigma.vercel.app/" class="demo-btn"
+                        target="_blank"
+                        rel="noopener noreferrer">Live Demo</a>
+                        <a href="#" class="code-btn">View Code</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Modern Restaurant Website</h3>
+                    <p>
+                        A responsive restaurant website with online ordering system, menu display, 
+                        table reservation and admin dashboard. Built with modern web technologies.
+                    </p>
+                    <div class="tech-stack">
+                          <!-- React -->
+                          <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+                        
+                          <!-- Vite -->
+                          <img src="images/tech-logos/vite-logo.png" alt="Vite" class="tech-logo">
+                          
+                          <!-- Redux -->
+                          <img src="images/tech-logos/redux-logo.png" alt="Redux" class="tech-logo">
+                          
+                          <!-- Tailwind CSS -->
+                          <img src="images/tech-logos/tailwind-logo.png" alt="Tailwind" class="tech-logo">
+                          
+                          <!-- Node.js -->
+                          <img src="images/tech-logos/nodejs-logo.png" alt="Node.js" class="tech-logo">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Project 3 -->
+            <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="project-image">
+                    <img src="/images/project3.jpg" alt="Portfolio Website">
+                    <div class="project-links">
+                        <a href="#" class="demo-btn">Live Demo</a>
+                        <a href="#" class="code-btn">View Code</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>Responsive portfolio website with interactive animations and modern design using HTML5, CSS3 and JavaScript.</p>
+                    <div class="tech-stack">
+                        <img src="images/tech-logos/html-logo.png" alt="HTML5" class="tech-logo">
+                        <img src="images/tech-logos/css-logo.png" alt="CSS3" class="tech-logo">
+                        <img src="images/tech-logos/javascript-logo.png" alt="JavaScript" class="tech-logo">
+                      
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 - Car Rental -->
+<div class="project-card" data-aos="zoom-in" data-aos-delay="500">
+    <div class="project-image">
+        <img src="/images/car-rental.jpg" alt="Car Rental System">
+        <div class="project-links">
+            <a href="https://car-rental-khaki-nu.vercel.app/" class="demo-btn"
+                        target="_blank"
+                        rel="noopener noreferrer">Live Demo</a>
+            <a href="#" class="code-btn">View Code</a>
+        </div>
+    </div>
+    <div class="project-info">
+        <h3>Car Rental System</h3>
+        <p>Full-stack car rental platform with real-time availability checking, booking system and admin dashboard. Integrated with payment gateway and GPS tracking.</p>
+        <div class="tech-stack">
+            <img src="images/tech-logos/html-logo.png" alt="HTML5" class="tech-logo">
+            <img src="images/tech-logos/css-logo.png" alt="CSS3" class="tech-logo">
+            <img src="images/tech-logos/javascript-logo.png" alt="JavaScript" class="tech-logo">
+          
+        </div>
+    </div>
+</div>
+
+<!-- Project 5 - Travel Website -->
+<div class="project-card" data-aos="zoom-in" data-aos-delay="600">
+    <div class="project-image">
+        <img src="/images/travel-website.jpg" alt="Travel Agency">
+        <div class="project-links">
+            <a href="https://travel-three-murex.vercel.app/" class="demo-btn"
+                        target="_blank"
+                        rel="noopener noreferrer">Live Demo</a>
+            <a href="#" class="code-btn">View Code</a>
+        </div>
+    </div>
+    <div class="project-info">
+        <h3>Travel Agency Portal</h3>
+        <p>Feature-rich travel booking platform with hotel search, flight booking, and tour packages. Includes user reviews and interactive maps.</p>
+        <div class="tech-stack">
+            <!-- React -->
+            <img src="images/tech-logos/react-logo.png" alt="React" class="tech-logo">
+          
+            <!-- Vite -->
+            <img src="images/tech-logos/vite-logo.png" alt="Vite" class="tech-logo">
+            
+            <!-- Redux -->
+            <img src="images/tech-logos/redux-logo.png" alt="Redux" class="tech-logo">
+            
+            <!-- Tailwind CSS -->
+            <img src="images/tech-logos/tailwind-logo.png" alt="Tailwind" class="tech-logo">
+            
+            <!-- Node.js -->
+            <img src="images/tech-logos/nodejs-logo.png" alt="Node.js" class="tech-logo">
+      </div>
+    </div>
+</div>
+
+<!-- Project 6 - Sports Website -->
+<div class="project-card" data-aos="zoom-in" data-aos-delay="700">
+    <div class="project-image">
+        <img src="/images/coffee-shop.jpg" alt="Coffee Shop Website">
+        <div class="project-links">
+            <a href="https://coffee-shop-sable-theta.vercel.app/#" class="demo-btn" target="_blank">Live Demo</a>
+            <a href="#" class="code-btn">View Code</a>
+        </div>
+    </div>
+    <div class="project-info">
+        <h3>Coffee Shop Website</h3>
+        <p>An elegant and responsive website for a coffee shop, featuring menu browsing, online ordering, store locator, and customer reviews. Includes a blog for coffee enthusiasts.</p>
+        <div class="tech-stack">
+            <img src="images/tech-logos/html-logo.png" alt="HTML5" class="tech-logo">
+            <img src="images/tech-logos/css-logo.png" alt="CSS3" class="tech-logo">
+            <img src="images/tech-logos/javascript-logo.png" alt="JavaScript" class="tech-logo">
+          
+        </div>
+    </div>
+</div>
+        </div>
+         <!-- Explore More Projects Button -->
+         <div class="explore-more" data-aos="fade-up" data-aos-delay="500">
+            <a href="projects.html" class="explore-btn">
+                Explore More Projects <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="contact-container" data-aos="fade-up" data-aos-duration="1500">
+        <h2>Get in <span>Touch</span></h2>
+        
+        <div class="contact-content">
+            <!-- Contact Form -->
+            <div class="contact-form" data-aos="fade-right" data-aos-delay="200">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                        <i class="fas fa-comment"></i>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-left" data-aos-delay="400">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Call Me</h3>
+                        <p>+880 1883 229529</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>muttakinrhaman626@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="subscribe-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="footer-grid">
+            <!-- About Column -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="footer-title">Muttakin Sayed</h3>
+                <p class="footer-description">A passionate frontend developer specializing in creating modern, responsive and user-friendly web experiences.</p>
+                <div class="social-links">
+                    <a href="https://github.com/SayedMuttakin" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1300">
+                       <i class="fa-brands fa-github"></i>
+                    </a>
+                    
+                    <a href="https://web.facebook.com/muttakin.rahman.sayed/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1400">
+                       <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/muttakin-rahman-sayed-891ab0330/" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1500">
+                       <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    
+                    <a href="https://x.com/SayedMuttakin" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-aos="fade-up" 
+                       data-aos-duration="1500" 
+                       data-aos-delay="1600">
+                       <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="footer-title">Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
+                    <li><i class="fas fa-envelope"></i> muttakinrhaman626@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +880 1883 229295</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright" data-aos="fade-up" data-aos-delay="500">
+            <p>© 2024 Muttakin Sayed. All rights reserved</p>
+            <p>Made with <i class="fas fa-heart"></i> in Bangladesh</p>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
