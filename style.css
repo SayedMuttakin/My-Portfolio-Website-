@@ -1124,7 +1124,9 @@ input:focus, textarea:focus {
         flex-wrap: wrap;
         text-align: center;
     }
-
+    .footer-col {
+        align-items: center;
+    }
     .footer-col p {
         margin: 15px 0;
         word-break: break-word;
