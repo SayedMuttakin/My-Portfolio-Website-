@@ -1158,5 +1158,61 @@ input:focus, textarea:focus {
       margin-left: 0 !important;
       padding: 0 15px !important;
     }
-  }
+    #home .main-container {
+        flex-direction: column;
+        padding: 0 15px;
+      }
+      
+      #home .content {
+        width: 100% !important;
+        padding: 0 10px;
+      }
+      
+      #home .image {
+        width: 70% !important;
+        height: auto;
+        margin: 20px 0;
+      }
+    
+      /* Skills Section Fix */
+      #skills .skills-columns {
+        flex-direction: column;
+        padding: 0 15px;
+      }
+      
+      #skills .skills-column {
+        min-width: 100% !important;
+        padding: 0 10px;
+      }
+    
+      /* General Mobile Overflow Prevention */
+      body {
+        overflow-x: hidden !important;
+        position: relative;
+      }
+      
+      .skill-info,
+      .skill-bar {
+        max-width: 100%;
+        overflow: hidden;
+      }
+      
+      .project-grid,
+      .footer-grid,
+      .contact-content {
+        max-width: 100vw;
+      }
+      
+      /* Remove any horizontal padding/margins */
+      .nav-container,
+      .main-container,
+      .skills-container,
+      .about-container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  
  
