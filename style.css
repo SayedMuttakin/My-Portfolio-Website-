@@ -1046,15 +1046,8 @@ input:focus, textarea:focus {
     .footer-col p{
         margin: 20px;
     }
-}
-
-
-
-@media (max-width: 768px) {
-    .main-container .image:hover, 
-    .main-container .image:active {
-        transform: scale(1.1);
-        transition: 0.3s ease-in-out;
+    .main-protfolio{
+        overflow-x: hidden;
     }
 }
 
@@ -1158,6 +1151,9 @@ input:focus, textarea:focus {
       margin-left: 0 !important;
       padding: 0 15px !important;
     }
+    .main-protfolio{
+        overflow-x: hidden;
     }
+ }
   
  
