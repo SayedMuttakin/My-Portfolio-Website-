@@ -1159,40 +1159,4 @@ input:focus, textarea:focus {
       padding: 0 15px !important;
     }
   }
-  /* Mobile Overflow Fix */
-@media (max-width: 768px) {
-    /* Home Section Fix */
-    #home .main-container {
-      overflow-x: hidden;
-    }
-    
-    #home .image img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    /* Skills Section Fix */
-    #skills .skills-columns {
-      flex-direction: column;
-      gap: 2rem;
-    }
-  
-    #skills .skill-bar {
-      max-width: 100%;
-      overflow: hidden;
-    }
-  
-    /* Hide speech bubble element if exists */
-    .speech-bubble {
-      display: none;
-    }
-  
-    /* General mobile overflow prevention */
-    #home, #skills {
-      overflow-x: hidden;
-    }
-    
-    #home .content p {
-      padding: 0 15px;
-    }
-  }
+ 
