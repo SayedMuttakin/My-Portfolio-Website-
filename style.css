@@ -891,6 +891,7 @@ input:focus, textarea:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    
 }
 
 .subscribe-btn:hover {
@@ -933,6 +934,10 @@ input:focus, textarea:focus {
 
     .subscribe-btn {
         width: 100%;
+        height: 40px;
+        color: white;
+      
+      
     }
 }
 
