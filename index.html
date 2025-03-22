@@ -486,6 +486,48 @@
                 </form>
             </div>
 
+            <!-- Contact Info -->
+            <div class="contact-info" data-aos="fade-left" data-aos-delay="400">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Location</h3>
+                        <p>Dhaka, Bangladesh</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Call Me</h3>
+                        <p>+880 1883 229529</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p>muttakinrhaman626@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="newsletter">
+                    <h4>Subscribe to Newsletter</h4>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="subscribe-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -567,10 +609,11 @@
     </div>
 </footer>
 <script>
-    // মোবাইল কম্প্যাটিবল কালারফুল কার্সর
+    // কালারফুল স্মোকি কার্সর স্ক্রিপ্ট
     const canvas = document.getElementById('smokeyCanvas');
     const ctx = canvas.getContext('2d');
     
+    // ক্যানভাস রিসাইজ
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -578,74 +621,69 @@
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
+    // পার্টিকেল ক্লাস (রঙিন ভার্সন)
     class Particle {
         constructor(x, y) {
             this.x = x;
             this.y = y;
-            this.size = Math.random() * 10 + 2;
-            this.speedX = Math.random() * 3 - 1.5;
-            this.speedY = Math.random() * 3 - 1.5;
+            this.size = Math.random() * 12 + 2;
+            this.speedX = Math.random() * 4 - 2;
+            this.speedY = Math.random() * 4 - 2;
             this.opacity = 1;
-            this.hue = Math.random() * 360;
+            this.hue = Math.random() * 360; // র্যান্ডম কালার হিউ
+            this.colorSpeed = Math.random() * 2 + 1; // কালার চেঞ্জ স্পিড
         }
 
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-            this.opacity -= 0.02;
+            this.opacity -= 0.015;
             this.size *= 0.96;
-            this.hue += 0.5;
+            this.hue += this.colorSpeed; // হিউ ভ্যালু আপডেট
+            if(this.hue > 360) this.hue = 0;
         }
 
         draw() {
-            ctx.fillStyle = `hsla(${this.hue}, 70%, 50%, ${this.opacity})`;
+            ctx.fillStyle = `hsla(${this.hue}, 70%, 60%, ${this.opacity})`;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();
         }
     }
 
+    // পার্টিকেল সিস্টেম
     let particles = [];
-    const maxParticles = 60;
+    const maxParticles = 80;
 
-    // মাউস এবং টাচ ইভেন্ট হ্যান্ডলার
-    function handleMove(e) {
-        let clientX, clientY;
-        
-        if(e.type === 'touchmove') {
-            clientX = e.touches[0].clientX;
-            clientY = e.touches[0].clientY;
-            e.preventDefault(); // মোবাইল স্ক্রল ব্লক করবে
-        } else {
-            clientX = e.clientX;
-            clientY = e.clientY;
-        }
-
-        for(let i = 0; i < 3; i++) {
-            particles.push(new Particle(clientX, clientY));
+    // মাউস মুভমেন্ট
+    let mouseX = 0, mouseY = 0;
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        for(let i = 0; i < 4; i++) {
+            particles.push(new Particle(mouseX, mouseY));
             if(particles.length > maxParticles) particles.shift();
         }
-    }
+    });
 
-    // ইভেন্ট লিসেনার
-    document.addEventListener('mousemove', handleMove);
-    document.addEventListener('touchmove', handleMove, { passive: false });
-
-    // অ্যানিমেশন
+    // অ্যানিমেশন লুপ
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
         particles.forEach((particle, index) => {
             particle.update();
             particle.draw();
-            if(particle.opacity <= 0) particles.splice(index, 1);
+            if(particle.opacity <= 0.1 || particle.size <= 0.5) {
+                particles.splice(index, 1);
+            }
         });
+
         requestAnimationFrame(animate);
     }
     animate();
 
-    // রিসেট ইভেন্ট
+    // মাউস লিভ করলে রিসেট
     document.addEventListener('mouseleave', () => particles = []);
-    document.addEventListener('touchend', () => particles = []);
 </script>
 
 
