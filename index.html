@@ -7,9 +7,26 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 
+     <!-- স্মোকি কার্সর স্টাইল যোগ করা হয়েছে -->
+     <style>
+        * {
+            cursor: none;
+        }
+        #smokeyCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+
+
     <title>Muttakin's Portfolio</title>
 </head>
 <body>
+     <!-- Canvas এলিমেন্ট যোগ করা হয়েছে -->
+     <canvas id="smokeyCanvas"></canvas>
 
     <nav>
         <div class="nav-container">
@@ -46,7 +63,7 @@
             <div class="content">
                 <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Muttakin</span></h1>
                 <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">"I am a passionate Frontend Developer who loves building user-friendly and responsive websites using React, Redux, and Tailwind CSS. I am always eager to learn new technologies and work on improving UI/UX design." 😊</p>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">"I am a passionate Frontend Developer who loves building user-friendly and responsive websites using Html, Css, JavaScript, React, Redux, and Tailwind CSS. I am always eager to learn new technologies and work on improving UI/UX design." 😊</p>
                 <div class="social-links">
                     <a href="https://github.com/SayedMuttakin" 
                        target="_blank" 
@@ -549,6 +566,88 @@
         </div>
     </div>
 </footer>
+<script>
+    // মোবাইল কম্প্যাটিবল কালারফুল কার্সর
+    const canvas = document.getElementById('smokeyCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.size = Math.random() * 10 + 2;
+            this.speedX = Math.random() * 3 - 1.5;
+            this.speedY = Math.random() * 3 - 1.5;
+            this.opacity = 1;
+            this.hue = Math.random() * 360;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.opacity -= 0.02;
+            this.size *= 0.96;
+            this.hue += 0.5;
+        }
+
+        draw() {
+            ctx.fillStyle = `hsla(${this.hue}, 70%, 50%, ${this.opacity})`;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    }
+
+    let particles = [];
+    const maxParticles = 60;
+
+    // মাউস এবং টাচ ইভেন্ট হ্যান্ডলার
+    function handleMove(e) {
+        let clientX, clientY;
+        
+        if(e.type === 'touchmove') {
+            clientX = e.touches[0].clientX;
+            clientY = e.touches[0].clientY;
+            e.preventDefault(); // মোবাইল স্ক্রল ব্লক করবে
+        } else {
+            clientX = e.clientX;
+            clientY = e.clientY;
+        }
+
+        for(let i = 0; i < 3; i++) {
+            particles.push(new Particle(clientX, clientY));
+            if(particles.length > maxParticles) particles.shift();
+        }
+    }
+
+    // ইভেন্ট লিসেনার
+    document.addEventListener('mousemove', handleMove);
+    document.addEventListener('touchmove', handleMove, { passive: false });
+
+    // অ্যানিমেশন
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach((particle, index) => {
+            particle.update();
+            particle.draw();
+            if(particle.opacity <= 0) particles.splice(index, 1);
+        });
+        requestAnimationFrame(animate);
+    }
+    animate();
+
+    // রিসেট ইভেন্ট
+    document.addEventListener('mouseleave', () => particles = []);
+    document.addEventListener('touchend', () => particles = []);
+</script>
+
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
